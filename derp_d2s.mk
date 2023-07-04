@@ -43,7 +43,7 @@ TARGET_SCREEN_WIDTH := 1440
 TARGET_BOOT_ANIMATION_RES := 1440
 
 ## Inherit some common Derpfest stuff
-$(call inherit-product, vendor/derpfest/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 #Official Tag
 DERP_BUILDTYPE := Official
