@@ -26,6 +26,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Inherit viper4androidfx
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Shims
 PRODUCT_PACKAGES += \
     libshim_sfpex
