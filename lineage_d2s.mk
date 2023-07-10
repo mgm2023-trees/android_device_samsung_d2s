@@ -24,6 +24,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 ## Inscreen Fingerprint HAL
 TARGET_HAVE_FOD := true
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+
+#Faceunlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 ## S Pen
 TARGET_HAVE_SPEN := true
@@ -35,6 +40,20 @@ $(call inherit-product, device/samsung/d2s/device.mk)
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 3040
 TARGET_SCREEN_WIDTH := 1440
+
+# Use Google Telephony pack
+TARGET_USE_GOOGLE_TELEPHONY := true
+
+#Blur
+TARGET_ENABLE_BLUR := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := true
+TARGET_DEFAULT_ADB_ENABLED := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := Mgm2023
 
 ## Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
