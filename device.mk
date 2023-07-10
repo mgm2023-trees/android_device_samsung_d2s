@@ -20,6 +20,9 @@ $(call inherit-product, device/samsung/exynos9820-common/exynos9825.mk)
 # Inherit proprietary files
 $(call inherit-product, vendor/samsung/d2s/d2s-vendor.mk)
 
+# Inherit viper4android
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
