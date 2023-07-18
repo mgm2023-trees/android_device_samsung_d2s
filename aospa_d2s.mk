@@ -24,6 +24,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 ## Inscreen Fingerprint HAL
 TARGET_HAVE_FOD := true
+TARGET_HAD_UDFPS :=true
+TARGET_FACE_UNLOCK_SUPPORTED :=true
 
 ## S Pen
 TARGET_HAVE_SPEN := true
@@ -35,15 +37,16 @@ $(call inherit-product, device/samsung/d2s/device.mk)
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 3040
 TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOT_ANIMATION_RES := 1440
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 ## Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_d2s
+PRODUCT_NAME := aospa_d2s
 PRODUCT_DEVICE := d2s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N975F
